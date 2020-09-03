@@ -1,0 +1,16 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+    paths:
+        - app
+
+    # The level 8 is the highest level
+    level: 5
+
+    checkMissingIterableValueType: false
+
+    ignoreErrors:
+        - '#Call to an undefined method [a-zA-Z0-9\\_]+::messages\(\)#'
+        - '#Call to an undefined static method [a-zA-Z0-9\\_]+::jsonPaginate\(\)#'
+        - '#Method [a-zA-Z0-9\\_]::redirectTo\(\) should return string but return statement is missing.#'
